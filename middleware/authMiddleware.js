@@ -8,7 +8,7 @@ export const requireSignIn = async (req, res, next) => {
             process.env.JWT_SECRET
         );
         req.user = decode;
-        next();
+        next();  //go to next middleware
     } catch (error) {
         console.log(error);
     }
